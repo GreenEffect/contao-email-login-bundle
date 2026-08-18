@@ -1,6 +1,6 @@
 {
     "name": "greeneffect/contao-email-login-bundle",
-    "description": "Inscription et connexion des membres Contao avec l'adresse e-mail comme identifiant",
+    "description": "Registration and login of Contao members using the email address as the username",
     "type": "contao-bundle",
     "license": "CC-BY-SA-4.0",
     "keywords": [
