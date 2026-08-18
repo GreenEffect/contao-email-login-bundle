@@ -1,0 +1,49 @@
+{
+    "name": "greeneffect/contao-email-login-bundle",
+    "description": "Inscription et connexion des membres Contao avec l'adresse e-mail comme identifiant",
+    "type": "contao-bundle",
+    "license": "CC-BY-SA-4.0",
+    "keywords": [
+        "contao",
+        "contao-bundle",
+        "contao5",
+        "cms",
+        "authentication",
+        "login",
+        "member",
+        "email",
+        "php",
+        "symfony"
+    ],
+    "homepage": "https://github.com/GreenEffect/contao-email-login-bundle",
+    "authors": [
+        {
+            "name": "Green Effect",
+            "email": "contact@green-effect.fr"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/GreenEffect/contao-email-login-bundle/issues",
+        "source": "https://github.com/GreenEffect/contao-email-login-bundle"
+    },
+    "version": "1.0.0",
+    "require": {
+        "php": "^8.3",
+        "contao/core-bundle": "^5.7",
+        "doctrine/dbal": "^4.0",
+        "symfony/config": "^7.4",
+        "symfony/dependency-injection": "^7.4",
+        "symfony/http-kernel": "^7.4"
+    },
+    "suggest": {
+        "terminal42/notification_center": "Pour couvrir également le module d'inscription du Notification Center (^2.7)"
+    },
+    "autoload": {
+        "psr-4": {
+            "GreenEffect\\EmailLoginBundle\\": "src/"
+        }
+    },
+    "extra": {
+        "contao-manager-plugin": "GreenEffect\\EmailLoginBundle\\ContaoManager\\Plugin"
+    }
+}

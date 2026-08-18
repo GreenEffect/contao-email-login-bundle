@@ -1,0 +1,15 @@
+services:
+    _defaults:
+        autoconfigure: true
+
+    # Les arguments reprennent ceux de la définition du Notification Center
+    # (config/modules.php). Ils sont déclarés explicitement plutôt qu'hérités :
+    # une évolution du constructeur amont échouera à la compilation du conteneur
+    # plutôt que silencieusement à l'exécution.
+    GreenEffect\EmailLoginBundle\Module\EmailRegistrationController:
+        arguments:
+            - '@Terminal42\NotificationCenterBundle\NotificationCenter'
+            - '@request_stack'
+            - '@contao.opt_in'
+            - '@Codefog\HasteBundle\Formatter'
+            - '@Codefog\HasteBundle\UrlParser'

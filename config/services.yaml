@@ -1,0 +1,7 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    GreenEffect\EmailLoginBundle\EventListener\:
+        resource: '../src/EventListener'
