@@ -1,6 +1,6 @@
 ## Changelog
 
-### 1.0.0
+### 0.9.0
 
 - Initial release: registration and login of Contao members using their
   e-mail address as identifier.

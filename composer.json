@@ -26,7 +26,7 @@
         "issues": "https://github.com/GreenEffect/contao-email-login-bundle/issues",
         "source": "https://github.com/GreenEffect/contao-email-login-bundle"
     },
-    "version": "1.0.0",
+    "version": "0.9.0",
     "require": {
         "php": "^8.3",
         "contao/core-bundle": "^5.7",
