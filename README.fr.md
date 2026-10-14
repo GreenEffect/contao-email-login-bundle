@@ -53,9 +53,16 @@ n'importe `config/services_notification_center.yaml` que si la classe amont
 existe. Sans le Notification Center, le bundle fonctionne à l'identique sur le
 seul module natif.
 
-Les arguments du service reprennent ceux de `config/modules.php` du Notification
-Center. Si une future version en change le constructeur, la compilation du
-conteneur échouera explicitement — c'est voulu.
+Le service est **autowiré** : il ne recopie pas les arguments de
+`config/modules.php` du Notification Center, il les déduit du constructeur hérité.
+Seul `$optIn` est lié explicitement (`contao.opt_in`), Contao n'exposant pas
+d'alias pour `OptInInterface`. Si une future version ajoute une dépendance
+introuvable, c'est la compilation du conteneur qui échoue, au déploiement, et
+non la page d'inscription.
+
+Une liste d'arguments en dur, comme en 0.9.0, ne protégeait de rien : un argument
+en moins compile sans erreur et ne casse qu'à l'exécution (constaté avec la 2.7.6
+du Notification Center, cf. le CHANGELOG).
 
 ## Configuration du module d'inscription
 

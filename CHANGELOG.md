@@ -1,5 +1,15 @@
 ## Changelog
 
+### 0.9.1
+
+- Fix: the Notification Center registration module crashed (HTTP 500) with
+  Notification Center 2.7.6, whose `RegistrationController` constructor gained a
+  sixth argument (`ParameterBagInterface`). The service is now autowired instead
+  of listing the upstream arguments by hand, so it follows constructor changes
+  and works with Notification Center 2.7.4 as well as 2.7.6. Only `$optIn` is
+  bound explicitly (`contao.opt_in`), Contao exposing no alias for
+  `OptInInterface`.
+
 ### 0.9.0
 
 - Initial release: registration and login of Contao members using their
